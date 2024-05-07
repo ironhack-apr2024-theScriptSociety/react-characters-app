@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { Link } from "react-router-dom";
 
 
 function Home() {
@@ -30,6 +31,10 @@ function Home() {
                             <p>Name: {characterDetails.name}</p>
                             <p>Occupation: {characterDetails.occupation}</p>
                             <p>Weapon: {characterDetails.weapon}</p>
+
+                            <p>
+                                <Link to={`/characters/${characterDetails.id}`}>More details</Link>
+                            </p>
                         </div>
                     );
                 })
